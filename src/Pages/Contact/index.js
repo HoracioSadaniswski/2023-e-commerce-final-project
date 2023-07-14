@@ -1,11 +1,11 @@
 import React from 'react';
-
+import { Layout } from '../../Components/Layout';
 
 function Contact() {
   return (
-    <div className="">
+    <Layout>
       Contact
-    </div>
+    </Layout>
   );
 }
 

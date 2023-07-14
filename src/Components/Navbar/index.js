@@ -3,42 +3,58 @@ import { NavLink } from "react-router-dom";
 import './Navbar.css';
 
 const Navbar = () => {
+  let activeStyle = {
+    textDecoration: 'underline',
+  }
+
   return (
     <nav>
       <div className="navbar-left">
         <ul>
           <li className="logo">
             <NavLink to= '/'>
-              Logo
+              Misiotrónica
             </NavLink>
           </li>
           <li>
-            <NavLink to= '/'>
+            <NavLink 
+              to= '/' 
+              style={({ isActive }) => isActive ? activeStyle : undefined}>
               Todo
             </NavLink>
           </li>
           <li>
-            <NavLink to= '/informatica'>
+            <NavLink 
+              to= '/informatica'
+              style={({ isActive }) => isActive ? activeStyle : undefined}>
               Informática
             </NavLink>
           </li>
           <li>
-            <NavLink to= '/audio-video'>
+            <NavLink 
+              to= '/audio-video'
+              style={({ isActive }) => isActive ? activeStyle : undefined}>
               Audio y Video
             </NavLink>
           </li>
           <li>
-            <NavLink to= '/electronica'>
+            <NavLink 
+              to= '/electronica'
+              style={({ isActive }) => isActive ? activeStyle : undefined}>
               Electrónica
             </NavLink>
           </li>
           <li>
-            <NavLink to= '/redes-conectividad'>
+            <NavLink 
+              to= '/redes-conectividad'
+              style={({ isActive }) => isActive ? activeStyle : undefined}>
               Redes y Conectividad
             </NavLink>
           </li>
           <li>
-            <NavLink to= '/iluminacion'>
+            <NavLink 
+              to= '/iluminacion'
+              style={({ isActive }) => isActive ? activeStyle : undefined}>
               Iluminación
             </NavLink>
           </li>

@@ -1,19 +1,24 @@
 :root {
   --white: #ffffff;
   --black: #000000;
-  --very-light-pink: #c7c7c7;
+  --very-light-pink: #a49f9f;
   --text-input-field: #f7fef7;
   --hospital-green: #acd9b2;
+  --hospital-green-light: #acd9b263;
+  --hospital-strong-green: #5F8D4E;
   --sm: 14px;
   --md: 16px;
   --lg: 18px;
 }
 
 nav {
+  background: var(--hospital-green-light);
+  width: 100vw;
   display: flex;
   justify-content: space-between;
-  padding: 0 24px;
   border-bottom: 1px solid var(--very-light-pink);
+  top: 0;
+  position: absolute;
 }
 
 .logo {
@@ -37,13 +42,12 @@ nav {
 .navbar-left ul li a,  .navbar-right ul li a {
   text-decoration: none;
   color: var(--very-light-pink);
-  border: 1px solid var(--white);
   padding: 8px;
   border-radius: 8px;
 }
 .navbar-left ul li a:hover,  .navbar-right ul li a:hover {
-  border: 1px solid var(--hospital-green);
-  color: var(--hospital-green);
+  border: 1px solid var(--hospital-strong-green);
+  color: var(--hospital-strong-green);
 }
 .navbar-email {
   color: var(--very-light-pink);
@@ -67,7 +71,7 @@ nav {
   justify-content: center;
   align-items: center;
 }
-@media (max-width: 640px) {
+@media (max-width: 1000px) {
   .menu {
       display: block;
   }

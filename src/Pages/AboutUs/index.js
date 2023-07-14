@@ -1,11 +1,12 @@
 import React from 'react';
+import { Layout } from '../../Components/Layout';
 
 
 function AboutUs() {
   return (
-    <div className="">
+    <Layout>
       AboutUs
-    </div>
+    </Layout>
   );
 }
 

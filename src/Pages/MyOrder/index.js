@@ -1,10 +1,11 @@
 import React from 'react';
+import { Layout } from '../../Components/Layout';
 
 function MyOrder() {
   return (
-    <div className="">
+    <Layout>
       MyOrder
-    </div>
+    </Layout>
   );
 }
 
