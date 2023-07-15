@@ -1,6 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import './Navbar.css';
+import misiotronica from './misiotronica.png';
+import shoppingCart from './icon_shopping_cart.svg';
 
 const Navbar = () => {
   let activeStyle = {
@@ -10,12 +12,13 @@ const Navbar = () => {
   return (
     <nav>
       <div className="navbar-left">
+        {/* <div className="logo">
+          <NavLink to= '/'>
+            <span>MISIOTRONICA</span>
+            <img src={ misiotronica } alt="logo-empresa"/>
+          </NavLink>
+        </div> */}
         <ul>
-          <li className="logo">
-            <NavLink to= '/'>
-              Misiotrónica
-            </NavLink>
-          </li>
           <li>
             <NavLink 
               to= '/' 
@@ -85,7 +88,8 @@ const Navbar = () => {
           </li>
           <li className="navbar-shopping-cart">
             <NavLink >
-              🛒 0
+            <img src= { shoppingCart } alt="icon-cart"/>
+            <div>2</div>
             </NavLink>
           </li>
         </ul>
