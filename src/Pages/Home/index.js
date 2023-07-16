@@ -6,7 +6,9 @@ import { Card } from '../../Components/Card';
 function Home() {
   return (
     <Layout>
-      <Card/>
+      
+        <Card/>
+      
     </Layout>
   );
 }

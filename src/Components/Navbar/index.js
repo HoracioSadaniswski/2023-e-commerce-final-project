@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import './Navbar.css';
 import misiotronica from './misiotronica.png';
 import shoppingCart from './icon_shopping_cart.svg';
+import { ShoppingCartContext } from "../../Context";
 
 const Navbar = () => {
+  const context = useContext(ShoppingCartContext);
   let activeStyle = {
     textDecoration: 'underline',
   }
@@ -89,7 +91,9 @@ const Navbar = () => {
           <li className="navbar-shopping-cart">
             <NavLink >
             <img src= { shoppingCart } alt="icon-cart"/>
-            <div>2</div>
+            <div>
+              {context.count}
+            </div>
             </NavLink>
           </li>
         </ul>
