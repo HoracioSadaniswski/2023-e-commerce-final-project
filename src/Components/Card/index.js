@@ -7,12 +7,16 @@ import { ShoppingCartContext } from '../../Context'
 const Card = () => {
   const context = useContext(ShoppingCartContext);
 
+  const showProduct = () => {
+    context.openProductDetail()
+  }
+
   return (
     <section className='main-container'>
       <div className='cards-container'>
 
         <div className='product-card'>
-          <img src='https://images.pexels.com/photos/3587478/pexels-photo-3587478.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' alt="Auriculares"/>
+          <img onClick={() => context.openProductDetail()} src='https://images.pexels.com/photos/3587478/pexels-photo-3587478.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' alt="Auriculares"/>
           <div className="product-info">
             <div>
               <p>$120,00</p>
@@ -24,20 +28,8 @@ const Card = () => {
           </div>
         </div>
 
-        <div className='product-card'>
-          <img src='https://images.pexels.com/photos/3587478/pexels-photo-3587478.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' alt="Auriculares"/>
-          <div className="product-info">
-            <div>
-              <p>$120,00</p>
-              <p>Auriculares</p>
-            </div>
-            <figure onClick={ () => context.setCount(context.count + 1)}>
-              <img src={ BtnAdd } alt="Agregar"/>
-            </figure>
-          </div>
-        </div>
       </div>
-      
+
   </section>
   )
 };

@@ -38,6 +38,9 @@ nav {
 .navbar-left {
   display: flex;
 }
+.navbar-right{ 
+  padding: 0 24px;
+}
 .navbar-left ul {
   margin-left: 12px;
 }
