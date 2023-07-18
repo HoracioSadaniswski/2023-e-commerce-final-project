@@ -1,9 +1,11 @@
 :root {
-  --white: #FFFFFF;
+  --white: #ffffff;
   --black: #000000;
-  --very-light-pink: #C7C7C7;
-  --text-input-field: #F7F7F7;
-  --hospital-green: #ACD9B2;
+  --very-light-pink: #a49f9f;
+  --text-input-field: #f7fef7;
+  --hospital-green: #acd9b2;
+  --hospital-green-light: #acd9b263;
+  --hospital-strong-green: #5f8d4e;
   --sm: 14px;
   --md: 16px;
   --lg: 18px;
@@ -23,6 +25,10 @@
   height: 240px;
   border-radius: 20px;
   object-fit: cover;
+  cursor: pointer;
+}
+.product-card img:hover {
+  box-shadow: 0px 0 15px var(--hospital-strong-green);
 }
 .product-info {
   display: flex;

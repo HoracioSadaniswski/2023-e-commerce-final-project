@@ -23,7 +23,6 @@ export const ShoppingCartProvider = ({children}) => {
       isProductDetailOpen,
       productShow,
       setProductShow,
-
     }}>
       {children}
     </ShoppingCartContext.Provider>
