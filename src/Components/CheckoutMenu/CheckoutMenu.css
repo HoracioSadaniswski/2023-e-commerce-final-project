@@ -12,7 +12,7 @@
 }
 
 
-aside {
+.checkoutMenu {
   background-color: var(--white);
   width: 380px;
   box-sizing: border-box;

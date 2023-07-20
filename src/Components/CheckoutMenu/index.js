@@ -7,6 +7,12 @@ import './CheckoutMenu.css';
 const CheckoutMenu = () => {
   const context = useContext(ShoppingCartContext);
 
+  const handleDelete = (title) => {
+    const filteredProducts = context.cartProducts.filter(product => product.title !== title)
+    context.setCartProducts(filteredProducts)
+    context.setCount(context.count - 1)
+  }
+
   const calculateTotalPrice = () => {
     let totalPrice = 0;
     context.cartProducts.forEach((product) => {
@@ -31,6 +37,7 @@ const CheckoutMenu = () => {
             title={product.title}
             image= {product.image}
             price= {product.price}
+            handleDelete= {handleDelete}
             />
             ))
           }

@@ -3,12 +3,20 @@ import { NavLink } from "react-router-dom";
 import './Navbar.css';
 import misiotronica from './misiotronica.png';
 import shoppingCart from './icon_shopping_cart.svg';
-import { ShoppingCartContext } from "../../Context";
+import { ShoppingCartContext } from '../../Context';
+
 
 const Navbar = () => {
   const context = useContext(ShoppingCartContext);
+  
+
   let activeStyle = {
     textDecoration: 'underline',
+  }
+
+  const toggleCheckoutMenu = () => {
+    context.closeProductDetail();
+    context.openCheckoutMenu();
   }
 
   return (
@@ -89,7 +97,7 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li className="navbar-shopping-cart">
-            <NavLink >
+            <NavLink onClick={toggleCheckoutMenu} >
             <img src= { shoppingCart } alt="icon-cart"/>
             <div>
               {context.count}

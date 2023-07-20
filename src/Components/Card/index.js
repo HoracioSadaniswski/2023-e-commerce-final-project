@@ -10,6 +10,7 @@ const Card = () => {
   const showProduct = (product) => {
     context.setProductShow(product);
     context.openProductDetail();
+    context.closeCheckoutMenu();
   }
 
 // Product Data
@@ -103,7 +104,6 @@ const addProductToCart = (event, product) => {
   event.stopPropagation()
   context.setCount(context.count + 1)
   context.setCartProducts([...context.cartProducts, product])
-  context.openCheckoutMenu();
   console.log(context.cartProducts)
 }
 
