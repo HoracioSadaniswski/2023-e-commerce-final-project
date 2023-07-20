@@ -2,7 +2,7 @@
   --white: #ffffff;
   --black: #000000;
   --very-light-pink: #a49f9f;
-  --text-input-field: #f7fef7;
+  --text-input-field: #b3b8b3;
   --hospital-green: #acd9b2;
   --hospital-green-light: #acd9b263;
   --hospital-strong-green: #5f8d4e;
@@ -14,59 +14,69 @@
 
 aside {
   background-color: var(--white);
-  width: 360px;
+  width: 380px;
   box-sizing: border-box;
   position: absolute;
   right: 0;
   top: 60px;
   border-radius: 0 0 20px 20px;
   border: solid 1px var(--very-light-pink);
+  padding: 0 24px;
+}
+.products {
+  overflow-y: auto;
+  max-height: 300px;
+  width: 100%;
 }
 .hidden {
   display: none;
 }
-.product-detail-close {
+.title-container {
+  display: flex;
+  justify-content: center;
+}
+.title-container img {
   background: var(--white);
   width: 14px;
   height: 14px;
   position: absolute;
-  top: 24px;
+  top: 12px;
   left: 24px;
   z-index: 2;
   padding: 12px;
   border-radius: 50%;
+  margin-right: 14px;
 }
-.product-detail-close:hover {
+.title-container img:hover {
   cursor: pointer;
   background: var(--very-light-pink);
 }
-aside > .image:nth-child(2) {
-  width: 358px;
-  max-height: 360px;
-  object-fit: cover;
-  border-radius: 0 0 20px 20px;
+.title {
+  font-size: var(--lg);
+  font-weight: bold;
 }
-aside .product-info {
-  margin: 24px 24px 0 24px;
+
+.order {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 16px;
+  align-items: center;
+  background-color: var(--text-input-field);
+  margin-bottom: 24px;
+  border-radius: 8px;
+  padding: 0 24px;
+}
+.order p:nth-child(1) {
+  display: flex;
   flex-direction: column;
 }
-aside .product-info p:nth-child(1) {
+.order p span:nth-child(1) {
+  font-size: var(--md);
   font-weight: bold;
-  font-size: var(--md);
-  margin-top: 0;
-  margin-bottom: 4px;
 }
-aside .product-info p:nth-child(2) {
-  color: var(--very-light-pink);
-  font-size: var(--md);
-  margin-top: 0;
-  margin-bottom: 36px;
-}
-.product-info p:nth-child(3) {
-  color: var(--very-light-pink);
-  font-size: var(--sm);
-  margin-top: 0;
-  margin-bottom: 36px;
+.order p:nth-child(2) {
+  text-align: end;
+  font-weight: bold;
 }
 .primary-button {
   background-color: var(--hospital-green);
@@ -78,10 +88,4 @@ aside .product-info p:nth-child(2) {
   font-size: var(--md);
   font-weight: bold;
   height: 50px;
-  margin-bottom: 20px;
-}
-.add-to-cart-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }

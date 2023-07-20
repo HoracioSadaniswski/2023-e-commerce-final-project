@@ -8,6 +8,12 @@ const ProductDetail = () => {
   const context = useContext(ShoppingCartContext);
   const { image, title, price, description } = context.productShow;
 
+  const addProductToCart = (product) => {
+    context.setCount(context.count + 1)
+    context.setCartProducts([...context.cartProducts, product])
+    console.log(context.cartProducts)
+  };
+
   return (
     <aside className={`${context.isProductDetailOpen ? 'product-detail' : 'product-detail hidden'}`}>
       <div className='product-detail-close' onClick={context.closeProductDetail}>
@@ -19,7 +25,7 @@ const ProductDetail = () => {
         <p>{title}</p>
         <p>{description}</p>
         <button 
-        onClick={ () => context.setCount(context.count + 1)}
+        onClick={() => addProductToCart(context.productShow)}
         className= 'primary-button add-to-cart-button'>
           <img src={ btnAdd } alt='Agregar al carrito'/>
             Add to cart

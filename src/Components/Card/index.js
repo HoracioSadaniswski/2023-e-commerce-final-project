@@ -99,6 +99,14 @@ const products = [
 
 ];
 
+const addProductToCart = (event, product) => {
+  event.stopPropagation()
+  context.setCount(context.count + 1)
+  context.setCartProducts([...context.cartProducts, product])
+  context.openCheckoutMenu();
+  console.log(context.cartProducts)
+}
+
 
   return (
     <section className='main-container'>
@@ -111,7 +119,7 @@ const products = [
               <p>{product.price}</p>
               <p>{product.title}</p>
             </div>
-            <figure onClick={ () => context.setCount(context.count + 1)}>
+            <figure onClick={(event) => addProductToCart(event, product)} >
               <img src={ BtnAdd } alt="Agregar"/>
             </figure>
           </div>
