@@ -1,5 +1,6 @@
 import { useContext } from 'react';
-import { ShoppingCartContext } from '../../Context'
+import { Link } from 'react-router-dom';
+import { ShoppingCartContext } from '../../Context';
 import { OrderCard } from '../../Components/OrderCard';
 import iconClose from './icon_close.png';
 import './CheckoutMenu.css';
@@ -21,6 +22,18 @@ const CheckoutMenu = () => {
     });
     return totalPrice.toFixed(2);
   };
+
+  const handleCheckout = () => {
+    const orderToAdd = {
+      date: '21-07-23',
+      products: context.cartProducts,
+      totalProducts: context.cartProducts.length,
+      totalPrice: calculateTotalPrice()
+    }
+
+    context.setOrder([...context.order, orderToAdd])
+    context.setCartProducts([])
+  }
 
   return (
     <aside className={`${context.isCheckoutMenuOpen ? 'checkoutMenu' : 'checkoutMenu hidden'}`}>
@@ -49,10 +62,15 @@ const CheckoutMenu = () => {
         </p>
         <p>${calculateTotalPrice()}</p>
       </div>
-        
-      <button className="primary-button">
-        Confirmar
-      </button>
+      
+      <Link to='/my-orders/last'>
+        <button 
+          onClick={() => handleCheckout()}
+          className="primary-button"
+        >
+          Continuar
+        </button>
+      </Link>
       
     </aside>
   )

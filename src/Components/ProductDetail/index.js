@@ -30,7 +30,7 @@ const ProductDetail = () => {
         onClick={() => addProductToCart(context.productShow)}
         className= 'primary-button add-to-cart-button'>
           <img src={ btnAdd } alt='Agregar al carrito'/>
-            Add to cart
+            Agregar al carrito
         </button>
       </div>
     </aside>

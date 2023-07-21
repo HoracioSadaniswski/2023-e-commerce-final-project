@@ -5,9 +5,12 @@ export const ShoppingCartContext = createContext();
 export const ShoppingCartProvider = ({children}) => {
   //Shopping cart Increment
   const [count, setCount] = useState(0);
+
   // Shopping cart Add to cart
   const [cartProducts, setCartProducts] = useState([]);
 
+  //Shopping cart Order
+  const [order, setOrder] = useState([]);
 
   //Product detail - open/close
   const [isProductDetailOpen, setIsProductDetailOpen] = useState(false);
@@ -21,6 +24,7 @@ export const ShoppingCartProvider = ({children}) => {
 
   //Product detail - Motrar detalles
   const [productShow, setProductShow] = useState({});
+  
   
 
   return (
@@ -37,6 +41,8 @@ export const ShoppingCartProvider = ({children}) => {
       isCheckoutMenuOpen,
       openCheckoutMenu,
       closeCheckoutMenu,
+      order,
+      setOrder,
     }}>
       {children}
     </ShoppingCartContext.Provider>
