@@ -1,0 +1,50 @@
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --very-light-pink: #a49f9f;
+  --text-input-field: #f7fef7;
+  --hospital-green: #acd9b2;
+  --hospital-green-light: #acd9b263;
+  --hospital-strong-green: #5f8d4e;
+  --sm: 14px;
+  --md: 16px;
+  --lg: 18px;
+}
+.container-orders-card {
+  width: 320px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: solid 1px var(--very-light-pink);
+  border-radius: 20px;
+  margin-bottom: 15px;
+  padding: 5px;
+}
+.container-orders-card:hover {
+  background-color: var(--hospital-green-light);
+}
+.container-orders-card p {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+  text-decoration: none;
+}
+.date-products {
+  display: flex;
+  flex-direction: column;
+}
+.date-products p {
+  text-decoration: none;
+  color: var(--very-light-pink);
+}
+.price-arrow {
+  text-decoration: none;
+  display: flex;
+  font-size: large;
+  font-weight: bold;
+  color: #000000;
+}
+.price-arrow img {
+  margin-left: 10px;
+}

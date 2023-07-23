@@ -1,0 +1,31 @@
+.my-order-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.icon-back-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon-back-title img {
+  transform: rotate(180deg);
+  background: var(--white);
+  margin-right: 14px;
+  width: 14px;
+  height: 14px;
+  padding: 12px;
+  border-radius: 50%;
+}
+.icon-back-title img:hover {
+  cursor: pointer;
+  background: var(--hospital-green-light);
+}
+.icon-back-title h1 {
+  margin-right: 20px;
+}
+.container-cards {
+  border: solid 1px gray;
+  border-radius: 20px;
+  padding: 20px;
+}

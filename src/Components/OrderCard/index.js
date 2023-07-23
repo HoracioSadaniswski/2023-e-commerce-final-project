@@ -1,4 +1,3 @@
-import { render } from '@testing-library/react';
 import iconClose from './icon_close.png';
 import './orderCard.css'
 

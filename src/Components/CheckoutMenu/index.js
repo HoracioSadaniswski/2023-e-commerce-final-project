@@ -33,6 +33,8 @@ const CheckoutMenu = () => {
 
     context.setOrder([...context.order, orderToAdd])
     context.setCartProducts([])
+    context.setCount(context.count = 0)
+    context.closeCheckoutMenu()
   }
 
   return (
