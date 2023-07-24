@@ -1,0 +1,32 @@
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --very-light-pink: #a49f9f;
+  --text-input-field: #b3b8b3;
+  --hospital-green: #acd9b2;
+  --hospital-green-light: #acd9b263;
+  --hospital-strong-green: #5f8d4e;
+  --sm: 14px;
+  --md: 16px;
+  --lg: 18px;
+}
+
+.search-products {
+  display: flex;
+  justify-content: center;
+
+}
+.search-products input {
+  min-width: 320px;
+  height: 20px;
+  border: solid 2px var(--hospital-green);
+  border-radius: 20px;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+.search-products input:hover{
+  box-shadow: 0px 0px 5px var(--hospital-green);
+}
+.search-products input:focus{
+  color: var(--hospital-strong-green);
+}

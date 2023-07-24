@@ -28,18 +28,16 @@
   display: flex;
   justify-content: space-between;
   justify-content: center;
-  text-decoration: none;
+  list-style: none;
 }
 .date-products {
   display: flex;
   flex-direction: column;
 }
 .date-products p {
-  text-decoration: none;
   color: var(--very-light-pink);
 }
 .price-arrow {
-  text-decoration: none;
   display: flex;
   font-size: large;
   font-weight: bold;

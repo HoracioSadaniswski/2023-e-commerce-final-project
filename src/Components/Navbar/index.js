@@ -1,14 +1,15 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { NavLink } from "react-router-dom";
-import './Navbar.css';
-import misiotronica from './misiotronica.png';
-import shoppingCart from './icon_shopping_cart.svg';
 import { ShoppingCartContext } from '../../Context';
+import shoppingCart from './icon_shopping_cart.svg';
+import misiotronica from './misiotronica.png';
+import mobileMenu from './icon_menu.svg'
+import './Navbar.css';
 
 
 const Navbar = () => {
   const context = useContext(ShoppingCartContext);
-  
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   let activeStyle = {
     textDecoration: 'underline',
@@ -19,34 +20,42 @@ const Navbar = () => {
     context.openCheckoutMenu();
   }
 
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!isMobileMenuOpen);
+  }
+
   return (
     <nav>
       <div className="navbar-left">
-        {/* <div className="logo">
+        <div className="logo">
           <NavLink to= '/'>
             <span>MISIOTRONICA</span>
             <img src={ misiotronica } alt="logo-empresa"/>
           </NavLink>
-        </div> */}
+        </div> 
         <ul>
           <li>
             <NavLink 
               to= '/' 
-              style={({ isActive }) => isActive ? activeStyle : undefined}>
+              style={({ isActive }) => isActive ? activeStyle : undefined}
+              
+              >
               Todo
             </NavLink>
           </li>
           <li>
             <NavLink 
               to= '/informatica'
-              style={({ isActive }) => isActive ? activeStyle : undefined}>
+              style={({ isActive }) => isActive ? activeStyle : undefined}
+              >
               Informática
             </NavLink>
           </li>
           <li>
             <NavLink 
               to= '/audio-video'
-              style={({ isActive }) => isActive ? activeStyle : undefined}>
+              style={({ isActive }) => isActive ? activeStyle : undefined}
+              >
               Audio y Video
             </NavLink>
           </li>
@@ -106,6 +115,89 @@ const Navbar = () => {
           </li>
         </ul>
         </div>
+
+
+        <div className='icon-mobile-menu'>
+            <img 
+              onClick={toggleMobileMenu}
+              src={mobileMenu} alt='Mobile Menu'
+            />
+        </div>
+        <div className={`mobile-menu ${isMobileMenuOpen ? 'show' : 'inactive'}`}>
+          <ul>
+            <li>
+              <a href="/">CATEGORIAS</a>
+            </li>
+            <li>
+              <NavLink 
+                to= '/' 
+                style={({ isActive }) => isActive ? activeStyle : undefined}>
+                Todo
+              </NavLink>
+            </li>
+            <li>
+              <NavLink 
+                to= '/informatica'
+                style={({ isActive }) => isActive ? activeStyle : undefined}>
+                Informática
+              </NavLink>
+            </li>
+            <li>
+              <NavLink 
+                to= '/audio-video'
+                style={({ isActive }) => isActive ? activeStyle : undefined}>
+                Audio y Video
+              </NavLink>
+            </li>
+            <li>
+              <NavLink 
+                to= '/electronica'
+                style={({ isActive }) => isActive ? activeStyle : undefined}>
+                Electrónica
+              </NavLink>
+            </li>
+            <li>
+              <NavLink 
+                to= '/redes-conectividad'
+                style={({ isActive }) => isActive ? activeStyle : undefined}>
+                Redes y Conectividad
+              </NavLink>
+            </li>
+            <li>
+              <NavLink 
+                to= '/iluminacion'
+                style={({ isActive }) => isActive ? activeStyle : undefined}>
+                Iluminación
+              </NavLink>
+            </li>
+          </ul>
+            
+          <ul>
+            <li>
+              <NavLink to= '/my-orders'>
+                Mis Compras
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to= '/my-account'>
+                Mi cuenta
+              </NavLink>
+            </li>
+          </ul>
+          <ul>
+            <li className='email'>
+              <NavLink >
+                e-mail@example.com
+              </NavLink>
+            </li>
+            <li className='sign-out'>
+              <NavLink to= '/sign-in'>
+                Iniciar sesión
+              </NavLink>
+            </li>
+          </ul>
+        </div>
+
     </nav>
   )
 }
