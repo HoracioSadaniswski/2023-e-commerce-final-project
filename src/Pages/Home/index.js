@@ -7,6 +7,7 @@ import { ShoppingCartContext } from '../../Context';
 import './home.css';
 
 
+
 function Home() {
   const context = useContext(ShoppingCartContext);
   const [searchProduct, setSearchProduct] = useState('');

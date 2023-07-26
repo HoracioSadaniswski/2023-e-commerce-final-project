@@ -116,17 +116,22 @@ export const ShoppingCartProvider = ({children}) => {
   const openProductDetail = () => setIsProductDetailOpen(true);
   const closeProductDetail = () => setIsProductDetailOpen(false);
 
-    //Checkout Menu - open/close
-    const [isCheckoutMenuOpen, setIsCheckoutMenuOpen] = useState(false);
-    const openCheckoutMenu = () => setIsCheckoutMenuOpen(true);
-    const closeCheckoutMenu = () => setIsCheckoutMenuOpen(false);
+  //Checkout Menu - open/close
+  const [isCheckoutMenuOpen, setIsCheckoutMenuOpen] = useState(false);
+  const openCheckoutMenu = () => setIsCheckoutMenuOpen(true);
+  const closeCheckoutMenu = () => setIsCheckoutMenuOpen(false);
+
+  //mobile-menu - open/close
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const openMobileMenu = () => setIsMobileMenuOpen(true);
+  const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
   //Product detail - Mostrar detalles
   const [productShow, setProductShow] = useState({});
   
   //Search Products
   const [searchProduct, setSearchProduct] = useState(null);
-  console.log(searchProduct);
+  
 
   return (
     <ShoppingCartContext.Provider value={{
@@ -147,6 +152,9 @@ export const ShoppingCartProvider = ({children}) => {
       searchProduct,
       setSearchProduct,
       products,
+      isMobileMenuOpen,
+      openMobileMenu,
+      closeMobileMenu,
     }}>
       {children}
     </ShoppingCartContext.Provider>

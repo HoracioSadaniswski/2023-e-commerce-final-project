@@ -12,6 +12,7 @@ import { SignIn } from '../SignIn';
 import { Navbar } from '../../Components/Navbar';
 import { CheckoutMenu } from '../../Components/CheckoutMenu';
 import './App.css';
+import { MobileMenu } from '../../Components/MobileMenu';
 
 const AppRoutes = () => {
   let routes = useRoutes([
@@ -35,6 +36,7 @@ const App = () => {
       <BrowserRouter>
         <AppRoutes />
         <Navbar />
+        <MobileMenu/>
         <CheckoutMenu />
       </BrowserRouter>
     </ShoppingCartProvider>

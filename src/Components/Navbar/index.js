@@ -1,15 +1,14 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { ShoppingCartContext } from '../../Context';
 import shoppingCart from './icon_shopping_cart.svg';
 import misiotronica from './misiotronica.png';
-import mobileMenu from './icon_menu.svg'
 import './Navbar.css';
 
 
 const Navbar = () => {
   const context = useContext(ShoppingCartContext);
-  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  
 
   let activeStyle = {
     textDecoration: 'underline',
@@ -18,10 +17,6 @@ const Navbar = () => {
   const toggleCheckoutMenu = () => {
     context.closeProductDetail();
     context.openCheckoutMenu();
-  }
-
-  const toggleMobileMenu = () => {
-    setMobileMenuOpen(!isMobileMenuOpen);
   }
 
   return (
@@ -90,17 +85,17 @@ const Navbar = () => {
               e-mail@example.com
             </NavLink>
           </li>
-          <li>
+          <li className='navbar-my-orders'>
             <NavLink to= '/my-orders'>
               Mis Compras
             </NavLink>
           </li>
-          <li>
+          <li className='navbar-my-account'>
             <NavLink to= '/my-account'>
               Mi cuenta
             </NavLink>
           </li>
-          <li>
+          <li className='navbar-sign-in'>
             <NavLink to= '/sign-in'>
               Iniciar sesión
             </NavLink>
@@ -117,7 +112,7 @@ const Navbar = () => {
         </div>
 
 
-        <div className='icon-mobile-menu'>
+        {/* <div className='icon-mobile-menu'>
             <img 
               onClick={toggleMobileMenu}
               src={mobileMenu} alt='Mobile Menu'
@@ -196,7 +191,7 @@ const Navbar = () => {
               </NavLink>
             </li>
           </ul>
-        </div>
+        </div> */}
 
     </nav>
   )
