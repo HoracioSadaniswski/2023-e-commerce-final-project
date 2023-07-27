@@ -1,0 +1,61 @@
+
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --very-light-pink: #a49f9f;
+  --text-input-field: #b3b8b3;
+  --hospital-green: #acd9b2;
+  --hospital-green-light: #d1e7d4;
+  --hospital-strong-green: #5f8d4e;
+  --sm: 1.4rem;
+  --md: 1.6rem;
+  --lg: 1.8rem;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+footer {
+  width: 100%;
+  height: 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  background-color:var(--hospital-green-light);
+  border-top: 1px solid var(--very-light-pink);
+  margin-top: 50px;
+  position:static;
+  bottom: 0;
+}
+
+footer ul {
+  margin: 10px;
+  list-style: none;
+  display: flex;
+  padding-left: 0;
+}
+
+footer .footer-left {
+  margin-left: 50px;
+}
+
+footer .footer-left img {
+  width: 80px;
+  height: 80px;
+}
+
+footer .footer-right {
+  justify-self: right;
+}
+
+footer ul li a {
+  margin: 10px;
+  color: #5f6368;
+  text-decoration: none;
+  font-size: var(--sm);
+}
+
+footer ul li a:hover {
+  color: var(--hospital-strong-green);
+}

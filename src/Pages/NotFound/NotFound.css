@@ -1,6 +1,7 @@
 .not-found-container{
   background-color: rgb(170, 176, 176);
   top: 0;
+  left: 0;
   position: absolute;
   width: 100vw;
   height: 100vh;

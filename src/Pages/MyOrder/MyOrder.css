@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100vh;
 }
 .icon-back-title {
   display: flex;

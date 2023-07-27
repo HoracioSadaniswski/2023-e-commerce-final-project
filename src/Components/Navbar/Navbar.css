@@ -4,25 +4,29 @@
   --very-light-pink: #a49f9f;
   --text-input-field: #f7fef7;
   --hospital-green: #acd9b2;
-  --hospital-green-light: #acd9b263;
+  --hospital-green-light: #d1e7d4;
   --hospital-strong-green: #5f8d4e;
-  --sm: 14px;
-  --md: 16px;
-  --lg: 18px;
+  --sm: 1.4rem;
+  --md: 1.6rem;
+  --lg: 1.8rem;
+}
+html {
+  font-size: 62.5%;
 }
 
 nav {
   background: var(--hospital-green-light);
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid var(--very-light-pink);
   top: 0;
-  position: absolute;
+  position: fixed;
 }
 
 .navbar-left .logo img {
-  width: 60px;
+  width: 80px;
+  height: 80px;
   padding-left: 20px;
 }
 
@@ -33,7 +37,7 @@ nav {
   margin: 0;
   display: flex;
   align-items: center;
-  height: 60px;
+  height: 80px;
 }
 .navbar-left {
   display: flex;
@@ -50,15 +54,16 @@ nav {
   color: var(--very-light-pink);
   padding: 8px;
   border-radius: 8px;
+  font-size: 1.6rem;
 }
 .navbar-left ul li a:hover {
   border: 1px solid var(--hospital-strong-green);
   color: var(--hospital-strong-green);
 }
-.navbar-email {
+.navbar-right .navbar-email ul li a {
   color: var(--very-light-pink);
   font-size: var(--sm);
-  margin-right: 12px;
+  margin-right: 1.2rem;
 }
 .navbar-right ul li a:hover {
   color: var(--hospital-strong-green);
@@ -82,6 +87,12 @@ nav {
   align-items: center;
 }
 
+@media (max-width : 1300px) {
+  .logo {
+    display: none;
+  }
+}
+
 @media (max-width: 1000px) {
   .navbar-left ul {
       display: none;
@@ -92,9 +103,7 @@ nav {
   .navbar-sign-in {
       display: none;
   }
-  .logo {
-    display: none;
-  }
+
   .icon-mobile-menu {
     display: flex;
     align-items: center;

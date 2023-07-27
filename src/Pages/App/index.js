@@ -11,8 +11,9 @@ import { NotFound } from '../NotFound';
 import { SignIn } from '../SignIn';
 import { Navbar } from '../../Components/Navbar';
 import { CheckoutMenu } from '../../Components/CheckoutMenu';
-import './App.css';
 import { MobileMenu } from '../../Components/MobileMenu';
+import { Footer } from '../../Components/Footer';
+import './App.css';
 
 const AppRoutes = () => {
   let routes = useRoutes([
@@ -38,6 +39,7 @@ const App = () => {
         <Navbar />
         <MobileMenu/>
         <CheckoutMenu />
+        <Footer/>
       </BrowserRouter>
     </ShoppingCartProvider>
     

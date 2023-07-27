@@ -4,14 +4,18 @@
   --very-light-pink: #a49f9f;
   --text-input-field: #f7fef7;
   --hospital-green: #acd9b2;
-  --hospital-green-light: #acd9b263;
+  --hospital-green-light: #d1e7d4;
   --hospital-strong-green: #5f8d4e;
   --sm: 14px;
   --md: 16px;
   --lg: 18px;
 }
 
+.main-container {
+  height: 100%;
+}
 .cards-container {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fill, 240px);
   gap: 26px;
@@ -56,7 +60,7 @@
   margin-bottom: 0;
   color: var(--very-light-pink);
 }
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   .cards-container {
     grid-template-columns: repeat(auto-fill, 140px);
   }
