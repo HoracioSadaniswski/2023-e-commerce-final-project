@@ -13,10 +13,14 @@ const Footer = () => {
       </div>
       <ul className="footer-right">
         <li>
-            <a href="">Nuestra Empresa</a>
+          <NavLink to='/about-us'>
+            Nuestra Empresa
+          </NavLink>
         </li>
         <li>
-            <a href="">Contacto</a>
+        <NavLink to='/contact'>
+            Contacto
+        </NavLink>
         </li>
       </ul>
     </footer>

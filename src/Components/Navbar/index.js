@@ -9,7 +9,6 @@ import './Navbar.css';
 const Navbar = () => {
   const context = useContext(ShoppingCartContext);
   
-
   let activeStyle = {
     textDecoration: 'underline',
   }
@@ -29,6 +28,7 @@ const Navbar = () => {
           <li>
             <NavLink 
               to= '/' 
+              onClick={() => context.handleCategoryClick('todo')}
               style={({ isActive }) => isActive ? activeStyle : undefined}
               >
               Todo
@@ -37,6 +37,7 @@ const Navbar = () => {
           <li>
             <NavLink 
               to= '/informatica'
+              onClick={() => context.handleCategoryClick('informatica')}
               style={({ isActive }) => isActive ? activeStyle : undefined}
               >
               Informática
@@ -45,6 +46,7 @@ const Navbar = () => {
           <li>
             <NavLink 
               to= '/audio-video'
+              onClick={() => context.handleCategoryClick('audio-video')}
               style={({ isActive }) => isActive ? activeStyle : undefined}
               >
               Audio y Video
@@ -53,6 +55,7 @@ const Navbar = () => {
           <li>
             <NavLink 
               to= '/electronica'
+              onClick={() => context.handleCategoryClick('electronica')}
               style={({ isActive }) => isActive ? activeStyle : undefined}>
               Electrónica
             </NavLink>
@@ -60,6 +63,7 @@ const Navbar = () => {
           <li>
             <NavLink 
               to= '/redes-conectividad'
+              onClick={() => context.handleCategoryClick('redes-conectividad')}
               style={({ isActive }) => isActive ? activeStyle : undefined}>
               Redes y Conectividad
             </NavLink>
@@ -67,6 +71,7 @@ const Navbar = () => {
           <li>
             <NavLink 
               to= '/iluminacion'
+              onClick={() => context.handleCategoryClick('iluminacion')}
               style={({ isActive }) => isActive ? activeStyle : undefined}>
               Iluminación
             </NavLink>

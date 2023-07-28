@@ -12,10 +12,14 @@
   --lg: 18px;
 }
 
+.home-container {
+  height: 100%;
+}
 .search-products {
   display: flex;
   justify-content: center;
   margin: 80px auto;
+
 }
 .search-products input {
   min-width: 320px;

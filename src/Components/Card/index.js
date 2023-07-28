@@ -4,13 +4,16 @@ import BtnAdd from './bt_add_to_cart.svg';
 import { ShoppingCartContext } from '../../Context'
 import './Card.css';
 
-const Card = ({ searchProduct }) => {
+const Card = ({ searchProduct, selectedCategory }) => {
   const context = useContext(ShoppingCartContext);
   
 
   //Busqueda de productos
-  const filteredProducts = context.products.filter
-  (product => product.title.toLowerCase().includes(searchProduct.toLowerCase()));
+  const filteredProducts = context.products.filter((product) => {
+    const titleMatch = product.title.toLowerCase().includes(searchProduct.toLowerCase());
+    const categoryMatch = selectedCategory === 'todo' || product.category === selectedCategory;
+    return titleMatch && categoryMatch;
+  });
 
 
 

@@ -36,7 +36,8 @@ const MobileMenu = () => {
             <p>CATEGORIAS</p>
             <li>
               <NavLink 
-                to= '/' 
+                to= '/'
+                onClick={() => context.handleCategoryClick('todo')}
                 style={({ isActive }) => isActive ? activeStyle : undefined}>
                 Todo
               </NavLink>
@@ -44,6 +45,7 @@ const MobileMenu = () => {
             <li>
               <NavLink 
                 to= '/informatica'
+                onClick={() => context.handleCategoryClick('informatica')}
                 style={({ isActive }) => isActive ? activeStyle : undefined}>
                 Informática
               </NavLink>
@@ -51,6 +53,7 @@ const MobileMenu = () => {
             <li>
               <NavLink 
                 to= '/audio-video'
+                onClick={() => context.handleCategoryClick('audio-video')}
                 style={({ isActive }) => isActive ? activeStyle : undefined}>
                 Audio y Video
               </NavLink>
@@ -58,6 +61,7 @@ const MobileMenu = () => {
             <li>
               <NavLink 
                 to= '/electronica'
+                onClick={() => context.handleCategoryClick('electronica')}
                 style={({ isActive }) => isActive ? activeStyle : undefined}>
                 Electrónica
               </NavLink>
@@ -65,6 +69,7 @@ const MobileMenu = () => {
             <li>
               <NavLink 
                 to= '/redes-conectividad'
+                onClick={() => context.handleCategoryClick('redes-conectividad')}
                 style={({ isActive }) => isActive ? activeStyle : undefined}>
                 Redes y Conectividad
               </NavLink>
@@ -72,6 +77,7 @@ const MobileMenu = () => {
             <li>
               <NavLink 
                 to= '/iluminacion'
+                onClick={() => context.handleCategoryClick('iluminacion')}
                 style={({ isActive }) => isActive ? activeStyle : undefined}>
                 Iluminación
               </NavLink>

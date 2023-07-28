@@ -7,28 +7,28 @@ export const ShoppingCartProvider = ({children}) => {
   const [products] = useState ([
     //Informatica
     {
-      category: 'Informatica',
+      category: 'informatica',
       title: 'Notebook',
       image: 'https://images.pexels.com/photos/40185/mac-freelancer-macintosh-macbook-40185.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       price: '$1200',
       description: 'Potencia y portabilidad se fusionan en nuestra laptop de última generación. Diseñada para brindar un rendimiento excepcional en un formato compacto, esta laptop te ofrece la velocidad y eficiencia que necesitas para tus tareas diarias.',
     },
     {
-      category: 'Informatica',
+      category: 'informatica',
       title: 'Mouse',
       image: 'https://images.pexels.com/photos/5082559/pexels-photo-5082559.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       price: '$15',
       description: 'Su diseño ergonómico se adapta cómodamente a tu mano, evitando la fatiga y permitiéndote trabajar o jugar durante horas sin molestias. Descubre la combinación perfecta de funcionalidad y estilo en este mouse imprescindible para tu experiencia informática.',
     },
     {
-      category: 'Informatica',
+      category: 'informatica',
       title: 'GPU',
       image: 'https://images.pexels.com/photos/8622912/pexels-photo-8622912.jpeg',
       price: '$700',
       description: 'Nuestra GPU de última generación proporciona un rendimiento gráfico excepcional. Diseñada para potenciar tus experiencias visuales, esta GPU ofrece una capacidad de procesamiento y una calidad de imagen asombrosas. Ya sea que estés inmerso en juegos intensos o trabajando en tareas de diseño exigentes, esta GPU te brindará un rendimiento fluido y una representación visual impresionante. Descubre un nivel superior de realismo y rendimiento con nuestra potente GPU.',
     },
     {
-      category: 'Informatica',
+      category: 'informatica',
       title: 'Motherboard',
       image: 'https://images.pexels.com/photos/3520694/pexels-photo-3520694.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       price: '$450',
@@ -37,7 +37,7 @@ export const ShoppingCartProvider = ({children}) => {
     
     //audio y video
     {
-      category: 'Audio y Video',
+      category: 'audio-video',
       title: 'Auriculares',
       image: 'https://images.pexels.com/photos/3587478/pexels-photo-3587478.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       price: '$40',
@@ -45,14 +45,14 @@ export const ShoppingCartProvider = ({children}) => {
     },
   
     {
-      category: 'Audio y Video',
+      category: 'audio-video',
       title: 'Radio Vintage',
       image: 'https://images.pexels.com/photos/16964394/pexels-photo-16964394/free-photo-of-vintage-tecnologia-antiguo-sonar.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       price: '$50',
       description: 'Revive la nostalgia de la radio clásica con nuestro encantador y auténtico modelo vintage. Con un diseño retro y detalles cuidadosamente restaurados, esta radio añade un toque de elegancia a cualquier espacio. Sintoniza tus emisoras favoritas y disfruta de la calidez del sonido analógico en esta joya atemporal.',
     },
     {
-      category: 'Audio y Video',
+      category: 'audio-video',
       title: 'Camara',
       image: 'https://images.pexels.com/photos/1002638/pexels-photo-1002638.jpeg',
       price: '$400',
@@ -61,14 +61,14 @@ export const ShoppingCartProvider = ({children}) => {
   
     // Electronica
     {
-      category: 'Electronica',
+      category: 'electronica',
       title: 'Pen-drive',
       image: 'https://images.pexels.com/photos/4792751/pexels-photo-4792751.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       price: '$10',
       description: 'Con capacidades generosas y una conexión USB confiable, este pendrive te permite llevar contigo tus archivos importantes y multimedia dondequiera que vayas.',
     },
     {
-      category: 'Electronica',
+      category: 'electronica',
       title: 'Cable MicroUSB',
       image: 'https://images.pexels.com/photos/4219862/pexels-photo-4219862.jpeg',
       price: '$5',
@@ -77,7 +77,7 @@ export const ShoppingCartProvider = ({children}) => {
   
     //Conectividad 
     {
-      category: 'Conectividad',
+      category: 'redes-conectividad',
       title: 'Router WI-FI',
       image: 'https://images.pexels.com/photos/4218546/pexels-photo-4218546.jpeg',
       price: '$30',
@@ -86,14 +86,14 @@ export const ShoppingCartProvider = ({children}) => {
   
     //Iluminaicon
     {
-      category: 'Ilumincacion',
+      category: 'iluminacion',
       title: 'Luces RGB',
       image: 'https://images.pexels.com/photos/13988975/pexels-photo-13988975.jpeg',
       price: '$25',
       description: 'Nuestra luz RGB te permite crear ambientes cautivadores con su amplia gama de colores y efectos. Con su tecnología LED de alta calidad, puedes personalizar la iluminación según tus preferencias y crear atmósferas únicas en cualquier espacio.',
     },
     {
-      category: 'Ilumincacion',
+      category: 'iluminacion',
       title: 'Lampara de lava',
       image: 'https://images.pexels.com/photos/5677999/pexels-photo-5677999.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       price: '$55',
@@ -129,9 +129,21 @@ export const ShoppingCartProvider = ({children}) => {
   //Product detail - Mostrar detalles
   const [productShow, setProductShow] = useState({});
   
-  //Search Products
-  const [searchProduct, setSearchProduct] = useState(null);
+  //Search Products by title
+  const [searchProduct, setSearchProduct] = useState('');
   
+  const filteredByTitle = (product, searchByTitle) => {
+    return product?.filter(product =>product.title.toLowerCase().includes(searchByTitle.toLowerCase()));
+  }
+
+  // Search products by category
+  const [selectedCategory, setSelectedCategory] = useState('category');
+  
+  const handleCategoryClick = (category) => {
+    setSelectedCategory(category);
+    setSearchProduct(''); 
+    setSelectedCategory(category);
+  };
 
   return (
     <ShoppingCartContext.Provider value={{
@@ -155,6 +167,10 @@ export const ShoppingCartProvider = ({children}) => {
       isMobileMenuOpen,
       openMobileMenu,
       closeMobileMenu,
+      filteredByTitle,
+      selectedCategory,
+      setSelectedCategory,
+      handleCategoryClick,
     }}>
       {children}
     </ShoppingCartContext.Provider>

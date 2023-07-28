@@ -80,8 +80,25 @@ aside .product-info p:nth-child(2) {
   height: 50px;
   margin-bottom: 20px;
 }
+.primary-button:hover {
+  box-shadow: 0 0 5px var(--hospital-strong-green);
+}
 .add-to-cart-button {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media (max-width: 1000px) {
+  aside {
+    width: 280px;
+  }
+  aside > .image:nth-child(2) {
+    width: 279px;
+    max-height: 280px;
+  }
+  .product-detail-close{
+    width: 10px;
+    height: 10px;
+  }
 }

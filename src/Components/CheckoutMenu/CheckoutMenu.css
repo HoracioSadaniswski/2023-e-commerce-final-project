@@ -6,9 +6,13 @@
   --hospital-green: #acd9b2;
   --hospital-green-light: #d1e7d4;
   --hospital-strong-green: #5f8d4e;
-  --sm: 14px;
-  --md: 16px;
-  --lg: 18px;
+  --sm: 1.4rem;
+  --md: 1.6rem;
+  --lg: 1.8rem;
+}
+
+html {
+  font-size: 62.5%;
 }
 
 
@@ -77,6 +81,7 @@
 .order p:nth-child(2) {
   text-align: end;
   font-weight: bold;
+  font-size: var(--lg);
 }
 .primary-button {
   background-color: var(--hospital-green);
@@ -88,4 +93,10 @@
   font-size: var(--md);
   font-weight: bold;
   height: 50px;
+}
+
+@media (max-width: 1000px) {
+  .checkoutMenu {
+    top: 80px;
+  }
 }
