@@ -16,6 +16,7 @@ const Navbar = () => {
   const toggleCheckoutMenu = () => {
     context.closeProductDetail();
     context.openCheckoutMenu();
+    context.closeMobileMenu();
   }
 
   return (

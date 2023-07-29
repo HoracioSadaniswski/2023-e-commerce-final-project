@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <footer>
       <div className="footer-left">
-        <img src={logo} alt='logo image'/>
+        <img src={logo} alt='logo de la empresa'/>
       </div>
       <ul className="footer-right">
         <li>

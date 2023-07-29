@@ -1,7 +1,6 @@
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { ShoppingCartContext } from '../../Context';
-import { Layout } from '../../Components/Layout';
 import { OrderCard } from '../../Components/OrderCard';
 import iconArrow from '../../Components/OrdersCard/flechita.svg';
 import './MyOrder.css';
@@ -13,7 +12,7 @@ function MyOrder() {
   if (index === 'last') index = context.order?.length -1
 
   return (
-    <Layout>
+    <>
       <div className='my-order-container'>
         <div className='icon-back-title'>
           <Link to='/my-orders'>
@@ -34,7 +33,7 @@ function MyOrder() {
           }
         </div>
     </div>
-  </Layout>
+  </>
 
   );
 }

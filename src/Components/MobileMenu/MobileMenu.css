@@ -24,18 +24,18 @@ html {
   width: 50%;
   height: 60vh;
   padding: 24px;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
   font-size: var(--md);
   position: fixed;
-}
-.hidden {
-  display: none;
-}
-.mobile-menu.show {
-  opacity: 1;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+.mobile-menu.active {
+  opacity: 1;
+  visibility: visible;
+
 }
 .icon-mobile-menu {
   width: 36px;
@@ -44,9 +44,12 @@ html {
   top: 20px;
   left: 20px;
   z-index: 999;
+  transform: rotate(0);
+  transition: .2s ease;
 }
 .icon-mobile-menu:hover {
-  background-color: var(--hospital-green);
+  cursor: pointer;
+  transform: rotate(360deg);
 }
 .mobile-menu a {
   text-decoration: none;

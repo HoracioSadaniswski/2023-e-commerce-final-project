@@ -21,6 +21,7 @@ const Card = ({ searchProduct, selectedCategory }) => {
     context.setProductShow(product);
     context.openProductDetail();
     context.closeCheckoutMenu();
+    context.closeMobileMenu();
   }
 
 const addProductToCart = (event, product) => {

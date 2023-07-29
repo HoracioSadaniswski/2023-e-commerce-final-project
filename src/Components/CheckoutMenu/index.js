@@ -38,7 +38,7 @@ const CheckoutMenu = () => {
   }
 
   return (
-    <aside className={`${context.isCheckoutMenuOpen ? 'checkoutMenu' : 'checkoutMenu hidden'}`}>
+    <aside className={`checkoutMenu ${context.isCheckoutMenuOpen ? 'active' : ''}`}>
       <div className='title-container' onClick={context.closeCheckoutMenu}>
         <img src= { iconClose } alt="close" />
         <p className='title'>Mi carrito</p>

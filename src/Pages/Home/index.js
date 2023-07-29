@@ -1,5 +1,4 @@
 import React, { useContext, useEffect } from 'react';
-import { Layout } from '../../Components/Layout';
 import { Card } from '../../Components/Card';
 import { ProductDetail } from '../../Components/ProductDetail';
 import { ShoppingCartContext } from '../../Context';
@@ -15,7 +14,7 @@ function Home() {
   }, []);
 
   return (
-    <Layout>
+    <>
       <div className='home-container'>
         <div className='search-products'>
           <input 
@@ -31,7 +30,7 @@ function Home() {
         />
         <ProductDetail/>
       </div>
-    </Layout>
+    </>
   );
 }
 

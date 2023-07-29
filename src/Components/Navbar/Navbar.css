@@ -70,7 +70,13 @@ nav {
 }
 .navbar-shopping-cart {
   position: relative;
-  
+}
+.navbar-shopping-cart img {
+  transform: rotate(0);
+  transition: .3s ease;
+}
+.navbar-shopping-cart img:hover {
+  transform: rotate(360deg);
 }
 .navbar-shopping-cart div {
   width: 16px;

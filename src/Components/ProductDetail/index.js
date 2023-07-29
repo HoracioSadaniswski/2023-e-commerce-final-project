@@ -17,7 +17,7 @@ const ProductDetail = () => {
   
   return (
     <aside 
-    className={`${context.isProductDetailOpen ? 'product-detail' : 'product-detail hidden'}`} >
+    className={`product-detail ${context.isProductDetailOpen ? 'active' : ''}`} >
       <div className='product-detail-close' onClick={context.closeProductDetail}>
         <img src= { iconClose } alt="close" />
       </div>

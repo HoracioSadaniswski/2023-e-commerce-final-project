@@ -1,0 +1,95 @@
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --very-light-pink: #a49f9f;
+  --text-input-field: #b3b8b3;
+  --hospital-green: #acd9b2;
+  --hospital-green-light: #d1e7d4;
+  --hospital-strong-green: #5f8d4e;
+  --sm: 1.4rem;
+  --md: 1.6rem;
+  --lg: 1.8rem;
+}
+
+html {
+  font-size: 62.5%;
+}
+.misiotronica-container {
+  max-width: 1200px;
+  margin: 90px auto;
+  padding: 20px;
+}
+header {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  justify-items: center;
+}
+.title-subtitle {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.title-subtitle h1 {
+  font-size: 8rem;
+  margin-bottom: 0;
+  color: rgb(33, 70, 37);
+}
+.title-subtitle h2 {
+  color: var(--very-light-pink);
+}
+.logotipe img {
+  max-width: 350px;
+  height: auto;
+}
+.logotipe p {
+  font-size: 2.4rem;
+  margin-left: 10px;
+  text-align: justify;
+}
+main {
+  margin-top: 40px;
+}
+main img {
+  max-width: 100%;
+  height: auto;
+}
+section {
+  padding-bottom: 40px;
+}
+section h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+section p {
+  font-size: 1.8rem;
+  text-align: justify;
+}
+.about-us,
+.guaranteed-products {
+  background-color: var(--hospital-green-light);
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  justify-items: center;
+  align-items: center;
+  padding: 10px;
+}
+.origins,
+.why-choose-us {
+  background-color: var(--white);
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  justify-items: center;
+  align-items: center;
+  padding: 10px;
+}
+
+@media (max-width : 1000px) {
+  header {
+    grid-template-columns: 1fr;
+  }
+  .title-subtitle {
+    display: none;
+  }
+}
+

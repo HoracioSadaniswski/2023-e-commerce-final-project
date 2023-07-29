@@ -19,6 +19,9 @@ const MobileMenu = () => {
     } else {
       openMobileMenu();
     }
+
+    context.closeCheckoutMenu()
+    context.closeProductDetail()
   };
 
   return (
@@ -30,7 +33,7 @@ const MobileMenu = () => {
           src={mobileMenu} alt='Mobile Menu'
         />
       </div>
-    <div className={`mobile-menu ${isMobileMenuOpen ? 'show' : 'hidden'}`}>
+    <div className={`mobile-menu ${isMobileMenuOpen ? 'active' : ''}`}>
       <div>
           <ul>
             <p>CATEGORIAS</p>
