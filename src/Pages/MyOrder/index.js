@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { ShoppingCartContext } from '../../Context';
 import { OrderCard } from '../../Components/OrderCard';
-import iconArrow from '../../Components/OrdersCard/flechita.svg';
+import iconArrow from '../../Assets/flechita.svg';
 import './MyOrder.css';
 
 function MyOrder() {

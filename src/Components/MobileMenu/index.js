@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { NavLink } from "react-router-dom";
 import { ShoppingCartContext } from '../../Context'
-import mobileMenu from './icon_menu.svg'
+import mobileMenu from '../../Assets/icon_menu.svg'
 import './MobileMenu.css';
 
 

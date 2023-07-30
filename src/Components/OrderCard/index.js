@@ -1,4 +1,4 @@
-import iconClose from './icon_close.png';
+import iconClose from '../../Assets/icon_close.png';
 import './orderCard.css'
 
 const OrderCard = props => {

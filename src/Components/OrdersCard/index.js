@@ -1,4 +1,4 @@
-import iconArrow from './flechita.svg';
+import iconArrow from '../../Assets/flechita.svg';
 import './OrdersCard.css'
 
 const OrdersCard = props => {
@@ -13,7 +13,7 @@ const OrdersCard = props => {
       </div>
       <div className='price-arrow'>
         <p>${totalPrice}</p>
-        <img src={ iconArrow }></img>
+        <img src={ iconArrow } alt='back'></img>
       </div>
     </div>
     

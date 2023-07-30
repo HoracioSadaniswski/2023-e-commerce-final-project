@@ -1,6 +1,6 @@
 import React from "react";
 import { useContext } from 'react';
-import BtnAdd from './bt_add_to_cart.svg';
+import BtnAdd from '../../Assets/bt_add_to_cart.svg';
 import { ShoppingCartContext } from '../../Context'
 import './Card.css';
 

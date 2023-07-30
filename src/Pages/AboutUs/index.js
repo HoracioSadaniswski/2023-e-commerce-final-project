@@ -1,10 +1,10 @@
 import React from 'react';
 import './aboutus.css';
-import logo from './misiotronica1.png';
-import misiones from './misiones.png';
-import guarantee from './guarantee.png';
-import confianza from './confianza.png';
-import comunication from './telecomunication.png';
+import logo from '../../Assets/misiotronica1.png';
+import misiones from '../../Assets/misiones.png';
+import guarantee from '../../Assets/guarantee.png';
+import confianza from '../../Assets/confianza.png';
+import comunication from '../../Assets/telecomunication.png';
 
 
 function AboutUs() {

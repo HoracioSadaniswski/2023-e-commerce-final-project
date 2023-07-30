@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { ShoppingCartContext } from '../../Context';
 import { OrderCard } from '../../Components/OrderCard';
-import iconClose from './icon_close.png';
+import iconClose from '../../Assets/icon_close.png';
 import './CheckoutMenu.css';
 
 const CheckoutMenu = () => {

@@ -1,8 +1,8 @@
 import { useContext } from 'react';
 import { ShoppingCartContext } from '../../Context'
 import './ProductDetail.css';
-import iconClose from './icon_close.png';
-import btnAdd from './bt_add_to_cart.svg';
+import iconClose from '../../Assets/icon_close.png';
+import btnAdd from '../../Assets/bt_add_to_cart.svg';
 
 const ProductDetail = () => {
   const context = useContext(ShoppingCartContext);

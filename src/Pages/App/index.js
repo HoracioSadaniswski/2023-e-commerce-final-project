@@ -13,7 +13,7 @@ import { Navbar } from '../../Components/Navbar';
 import { CheckoutMenu } from '../../Components/CheckoutMenu';
 import { MobileMenu } from '../../Components/MobileMenu';
 import { Footer } from '../../Components/Footer';
-import './App.css';
+
 
 const AppRoutes = () => {
   let routes = useRoutes([

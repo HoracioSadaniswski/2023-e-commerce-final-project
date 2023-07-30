@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { ShoppingCartContext } from '../../Context';
-import shoppingCart from './icon_shopping_cart.svg';
-import misiotronica from './misiotronica1.png';
+import shoppingCart from '../../Assets/icon_shopping_cart.svg';
+import misiotronica from '../../Assets/misiotronica1.png';
 import './Navbar.css';
 
 
