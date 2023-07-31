@@ -94,17 +94,12 @@ const MobileMenu = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink to= '/my-account'>
-                Mi cuenta
+              <NavLink to= '/create-account'>
+                Crear una cuenta
               </NavLink>
             </li>
           </ul>
           <ul>
-            <li className='email'>
-              <NavLink >
-                e-mail@example.com
-              </NavLink>
-            </li>
             <li className='sign-out'>
               <NavLink to= '/sign-in'>
                 Iniciar sesión

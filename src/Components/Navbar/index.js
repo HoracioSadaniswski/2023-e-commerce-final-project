@@ -82,19 +82,14 @@ const Navbar = () => {
 
       <div className="navbar-right">
         <ul>
-          <li className="navbar-email">
-            <NavLink >
-              e-mail@example.com
-            </NavLink>
-          </li>
           <li className='navbar-my-orders'>
             <NavLink to= '/my-orders'>
               Mis Compras
             </NavLink>
           </li>
-          <li className='navbar-my-account'>
-            <NavLink to= '/my-account'>
-              Mi cuenta
+          <li className='navbar-create-account'>
+            <NavLink to= '/create-account'>
+              Crear una cuenta
             </NavLink>
           </li>
           <li className='navbar-sign-in'>

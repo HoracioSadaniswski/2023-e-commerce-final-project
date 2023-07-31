@@ -1,0 +1,143 @@
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --very-light-pink: #a49f9f;
+  --text-input-field: #f7fef7;
+  --hospital-green: #acd9b2;
+  --hospital-green-light: #acd9b263;
+  --hospital-strong-green: #5f8d4e;
+  --sm: 1.4rem;
+  --md: 1.6rem;
+  --lg: 1.8rem;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.contact-container {
+  margin: 80px auto;
+  max-width: 1200px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid 1px var(--very-light-pink);
+  background-color: var(--hospital-green-light);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.contact-container h2 {
+  color: var(--very-light-pink);
+  font-size: var(--md);
+}
+.title-container-form {
+  font-size: var(--md);
+  color: var(--very-light-pink);
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: var(--white);
+  
+}
+.form-container {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  border: solid 1px var(--very-light-pink);
+  border-radius: 20px;
+  margin: 40px 20px;
+  background-color: var(--white);
+}
+form {
+  width: 100%;
+}
+.form-container form label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  border-radius: 20px;
+  
+}
+.form-container span {
+  margin-bottom: 5px;
+  font-size: var(--sm);
+}
+.form-container input,
+.form-container textarea {
+  width: 80%;
+  height: 100%;
+  border-radius: 5px;
+  border: solid 1px var(--very-light-pink);
+  padding: 5px;
+}
+
+#btn-send {
+  background-color: var(--hospital-green);
+  border-radius: 8px;
+  border: none;
+  color: var(--white);
+  width: 100%;
+  max-width: 300px;
+  cursor: pointer;
+  font-size: var(--md);
+  font-weight: bold;
+  height: 50px;
+  margin: 15px 0;
+}
+#btn-send:hover {
+  box-shadow: 0 0 5px var(--hospital-strong-green);
+}
+
+.social-media {
+  width: 90%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.icons-media,
+.icons-contact {
+  display: flex;
+  flex-direction:row;
+  align-items: stretch;
+  justify-content: space-around;
+  align-items: center;
+} 
+.icons-media li,
+.icons-contact li {
+  list-style: none;
+  margin: 10px;
+}
+.icons-media img,
+.icons-contact img {
+  width: 40px;
+  height:40px;
+  padding: 10px;
+  border-radius: 50%;
+}
+.icons-media img:hover {
+  cursor: pointer;
+  box-shadow: 0 0 5px var(--hospital-strong-green);
+}
+.icons-contact li a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.icons-contact li a span {
+  font-size: var(--sm);
+  text-decoration: none;
+  color: var(--very-light-pink);
+}
+
+
+
+

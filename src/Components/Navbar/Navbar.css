@@ -54,13 +54,15 @@ nav {
   color: var(--very-light-pink);
   padding: 8px;
   border-radius: 8px;
-  font-size: 1.6rem;
+  font-size: var(--sm);
+  display: flex;
+  text-align: center;
 }
 .navbar-left ul li a:hover {
   border: 1px solid var(--hospital-strong-green);
   color: var(--hospital-strong-green);
 }
-.navbar-right .navbar-email ul li a {
+.navbar-right ul li a {
   color: var(--very-light-pink);
   font-size: var(--sm);
   margin-right: 1.2rem;
@@ -86,8 +88,8 @@ nav {
   font-size: var(--sm);
   font-weight: bold;
   position: absolute;
-  top: -6px;
-  right: -3px;
+  top: -4px;
+  right: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -103,9 +105,8 @@ nav {
   .navbar-left ul {
       display: none;
   }
-  .navbar-email, 
   .navbar-my-orders, 
-  .navbar-my-account, 
+  .navbar-create-account, 
   .navbar-sign-in {
       display: none;
   }
